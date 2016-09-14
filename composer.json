@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-0": {
-            "swissbib\\esbackend\\": "src/"
+            "Swissbib\\ESbackend": "src/"
         }
     }
 }
