@@ -1,5 +1,5 @@
 {
-    "name": "swissbib/elasticsearchBackend",
+    "name": "swissbib/elasticsearchAdapter",
     "description": "component to access ES targets",
     "authors": [
         {
@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-0": {
-            "ElasticsearchBackend": "src/"
+            "ElasticsearchAdapter": "src/"
         }
     }
 }
