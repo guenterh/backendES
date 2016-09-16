@@ -13,7 +13,7 @@ namespace ElasticsearchAdapter\DSLBuilder\Query;
 
 
 //use VuFindSearch\Query\AbstractQuery;
-use ElasticsearchBackend\SearchHandler;
+use ElasticsearchAdapter\SearchHandler;
 
 class Query implements ESQueryInterface
 {
