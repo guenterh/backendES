@@ -9,13 +9,10 @@
  * @link     http://linked.swissbib.ch  Main Page
  */
 
-namespace ElasticsearchBackend\DSLBuilder\Query;
+namespace ElasticsearchAdapter\DSLBuilder\Query;
 
-use ElasticsearchBackend\DSLBuilder\UserQueryAwareInterface;
 
-interface ESQueryInterface extends UserQueryAwareInterface
+abstract class LeafQueryClause extends Query
 {
-    public function build();
-    public function getName();
 
 }

@@ -9,14 +9,13 @@
  * @link     http://linked.swissbib.ch  Main Page
  */
 
-namespace ElasticsearchBackend\DSLBuilder\Query;
+namespace ElasticsearchAdapter\DSLBuilder\Query;
 
+use ElasticsearchBackend\DSLBuilder\UserQueryAwareInterface;
 
-
-class MatchQuery extends LeafQueryClause
+interface ESQueryInterface extends UserQueryAwareInterface
 {
-
-    
-
+    public function build();
+    public function getName();
 
 }

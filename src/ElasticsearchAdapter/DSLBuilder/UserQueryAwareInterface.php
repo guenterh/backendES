@@ -9,7 +9,7 @@
  * @link     http://linked.swissbib.ch  Main Page
  */
 
-namespace ElasticsearchBackend\DSLBuilder;
+namespace ElasticsearchAdapter\DSLBuilder;
 
 
 interface UserQueryAwareInterface

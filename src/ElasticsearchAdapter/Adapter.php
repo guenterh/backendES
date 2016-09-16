@@ -9,10 +9,10 @@
  * @link     http://linked.swissbib.ch  Main Page
  */
 
-namespace ElasticsearchBackend;
+namespace ElasticsearchAdapter;
 
 
-class Backend
+class Adapter
 {
 
 
@@ -23,7 +23,7 @@ class Backend
 
 
     /**
-     * @var \ElasticsearchBackend\Connector
+     * @var \ElasticsearchAdapter\Connector
      */
     protected $connector;
 

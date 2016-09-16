@@ -10,10 +10,14 @@
  * @link     http://linked.swissbib.ch  Main Page
  */
 
-namespace ElasticsearchBackend;
+namespace ElasticsearchAdapter;
 
 
 
+/*
+ * SearchHandler is a facade for the concrete configured SearchSpec to be used
+ * by the concrete request
+ */
 class SearchHandler
 {
 

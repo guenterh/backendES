@@ -8,11 +8,10 @@
  * @link     http://linked.swissbib.ch  Main Page
  */
 
-namespace ElasticsearchBackend;
+namespace ElasticsearchAdapter;
 
 
 use Elasticsearch\ClientBuilder;
-//use VuFindSearch\ParamBag;
 use Elasticsearch\Client;
 
 

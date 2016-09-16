@@ -9,14 +9,14 @@
  * @link     http://linked.swissbib.ch  Main Page
  */
 
-namespace ElasticsearchBackend;
+namespace ElasticsearchAdapter;
 
 
 
 //use VuFindSearch\ParamBag;
 //use VuFindSearch\Query\AbstractQuery;
 //use VuFindSearch\Query\Query as VuFindQuery;
-use  ElasticsearchBackend\DSLBuilder\Query\Query;
+use  ElasticsearchAdapter\DSLBuilder\Query\Query;
 
 
 class ESQueryBuilder implements ESQueryBuilderInterface

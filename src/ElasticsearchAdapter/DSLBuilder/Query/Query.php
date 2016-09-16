@@ -9,11 +9,11 @@
  * @link     http://linked.swissbib.ch  Main Page
  */
 
-namespace ElasticsearchBackend\DSLBuilder\Query;
+namespace ElasticsearchAdapter\DSLBuilder\Query;
 
 
-use VuFindSearch\Query\AbstractQuery;
-use LinkedSwissbib\Backend\Elasticsearch\SearchHandler;
+//use VuFindSearch\Query\AbstractQuery;
+use ElasticsearchBackend\SearchHandler;
 
 class Query implements ESQueryInterface
 {
@@ -34,11 +34,11 @@ class Query implements ESQueryInterface
     //todo: think about a plugin manager solution
     protected $registeredQueryClasses =
         [
-            'bool' => 'LinkedSwissbib\Backend\Elasticsearch\DSLBuilder\Query\BooleanQuery',
-            'multi_match' => 'LinkedSwissbib\Backend\Elasticsearch\DSLBuilder\Query\MultiMatchQuery',
-            'nested'    =>   'LinkedSwissbib\Backend\Elasticsearch\DSLBuilder\Query\Nested',
-            'match' => 'LinkedSwissbib\Backend\Elasticsearch\DSLBuilder\Query\MatchQuery',
-            'query' => 'LinkedSwissbib\Backend\Elasticsearch\DSLBuilder\Query\Query'
+            'bool'          =>  'ElasticsearchAdapter\DSLBuilder\DSLBuilder\Query\BooleanQuery',
+            'multi_match'   =>  'ElasticsearchAdapter\DSLBuilder\DSLBuilder\Query\MultiMatchQuery',
+            'nested'        =>  'ElasticsearchAdapter\DSLBuilder\DSLBuilder\Query\Nested',
+            'match'         =>  'ElasticsearchAdapter\DSLBuilder\DSLBuilder\Query\MatchQuery',
+            'query'         =>  'ElasticsearchAdapter\DSLBuilder\DSLBuilder\Query\Query'
         ];
 
 
@@ -55,6 +55,9 @@ class Query implements ESQueryInterface
      */
     public function build()
     {
+
+
+
 
         $clause = [];
 

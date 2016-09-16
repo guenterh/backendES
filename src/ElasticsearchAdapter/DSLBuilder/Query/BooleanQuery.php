@@ -6,16 +6,16 @@
  * Time: 5:37 PM
  */
 
-namespace ElasticsearchBackend\DSLBuilder\Query;
+namespace ElasticsearchAdapter\DSLBuilder\Query;
 
 class BooleanQuery extends CompoundQueryClause
 {
 
    protected $registeredBooleanQueryClasses =
         [
-            'must' => 'LinkedSwissbib\Backend\Elasticsearch\DSLBuilder\Query\Must',
-            'must_not' => 'LinkedSwissbib\Backend\Elasticsearch\DSLBuilder\Query\MustNot',
-            'should'    => 'LinkedSwissbib\Backend\Elasticsearch\DSLBuilder\Query\Should',
+            'must' => 'ElasticsearchAdapter\DSLBuilder\Query\Must',
+            'must_not' => 'ElasticsearchAdapter\DSLBuilder\Query\MustNot',
+            'should'    => 'ElasticsearchAdapter\DSLBuilder\Query\Should',
         ];
 
 

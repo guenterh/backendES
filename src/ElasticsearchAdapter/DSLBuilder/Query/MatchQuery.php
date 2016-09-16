@@ -9,10 +9,14 @@
  * @link     http://linked.swissbib.ch  Main Page
  */
 
-namespace ElasticsearchBackend\DSLBuilder\Query;
+namespace ElasticsearchAdapter\DSLBuilder\Query;
 
 
-abstract class LeafQueryClause extends Query
+
+class MatchQuery extends LeafQueryClause
 {
+
+    
+
 
 }

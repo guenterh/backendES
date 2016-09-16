@@ -15,7 +15,8 @@
     },
     "require": {
         "php": ">=7.0",
-        "elasticsearch/elasticsearch": "~2.0"
+        "elasticsearch/elasticsearch": "~2.0",
+        "ongr/elasticsearch-dsl": "2.1.0"
 
     },
     "require-dev": {

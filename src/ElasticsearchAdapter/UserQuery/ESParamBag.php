@@ -10,13 +10,15 @@
  */
 
 
-namespace ElasticsearchBackend;
+namespace ElasticsearchAdapter\UserQuery;
 
 
 //use VuFindSearch\ParamBag;
 
 
-class ESParamBag
+use ElasticsearchAdapter\UserQuery\ESParamInterface;
+
+class ESParamBag implements ESParamInterface
 {
 
     /**

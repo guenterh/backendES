@@ -9,7 +9,7 @@
  * @link     http://linked.swissbib.ch  Main Page
  */
 
-namespace ElasticsearchBackend;
+namespace ElasticsearchAdapter;
 
 
 use VuFindSearch\Query\AbstractQuery;
@@ -21,7 +21,7 @@ interface ESQueryBuilderInterface {
 
 
     /**
-     * Build build a query for the target based on VuFind query object.
+     * Build build a query for the tarElasticsearchAdapterget based on VuFind query object.
      *
      */
     //todo welchen Typ nehme ich??

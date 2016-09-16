@@ -9,10 +9,10 @@
  * @link     http://linked.swissbib.ch  Main Page
  */
 
-namespace LinkedSwissbib\Backend\Elasticsearch\DSLBuilder\Query;
+namespace ElasticsearchAdapter\DSLBuilder\Query;
 
 
-
+use ONGR\ElasticsearchDSL\Query\MatchAllQuery;
 
 class Should extends BooleanQuery
 {
@@ -34,6 +34,8 @@ class Should extends BooleanQuery
             if (array_key_exists($key,$this->spec))
             {
                 /** @var Query $queryClass */
+
+                $matchAll = new  MatchAllQuery();
 
                 $queryClass = new $boolClause($this->query, $this->spec[$key]);
                 $this->addClause($queryClass);
