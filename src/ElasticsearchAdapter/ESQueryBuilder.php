@@ -11,12 +11,9 @@
 
 namespace ElasticsearchAdapter;
 
-
-
-//use VuFindSearch\ParamBag;
-//use VuFindSearch\Query\AbstractQuery;
-//use VuFindSearch\Query\Query as VuFindQuery;
-use  ElasticsearchAdapter\DSLBuilder\Query\Query;
+use ElasticsearchAdapter\DSLBuilder\Query\Query;
+use ElasticsearchAdapter\UserQuery\ESParamInterface;
+use ElasticsearchAdapter\UserQuery\UserQueryInterface;
 
 
 class ESQueryBuilder implements ESQueryBuilderInterface
@@ -27,7 +24,7 @@ class ESQueryBuilder implements ESQueryBuilderInterface
 
 
     /**
-     * @var ESParamBag
+     * @var ESParamInterface
      */
     protected $params;
 
@@ -75,18 +72,18 @@ class ESQueryBuilder implements ESQueryBuilderInterface
     /**
      */
     //todo: welcher Typ
-    public function build($vuFindQuery)
+    public function build(UserQueryInterface $query)
     {
 
 
         /** @var SearchHandler $searchHandlerType */
         //if ($vuFindQuery instanceof \stdClass) {
-            $searchHandlerType = $this->getSearchHandler($vuFindQuery->getHandler());
+            $searchHandlerType = $this->getSearchHandler($query->getHandler());
         //} else {
         //    $searchHandlerType = $this->getSearchHandler('allfields');
         //}
 
-        $esQuery = new Query($vuFindQuery,$searchHandlerType->getSpec());
+        $esQuery = new Query($query,$searchHandlerType->getSpec());
         $searchBody =  $esQuery->build();
 
         $getParams['body']['query'] = $searchBody;
@@ -98,7 +95,7 @@ class ESQueryBuilder implements ESQueryBuilderInterface
         return $getParams;
     }
 
-    public function setParams(ESParamBag $paramsBag)
+    public function setParams(ESParamInterface $paramsBag)
     {
         $this->params = $paramsBag;
     }

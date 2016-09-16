@@ -12,8 +12,8 @@
 namespace ElasticsearchAdapter;
 
 
-use VuFindSearch\Query\AbstractQuery;
-use VuFindSearch\ParamBag;
+use ElasticsearchAdapter\UserQuery\UserQueryInterface;
+use ElasticsearchAdapter\UserQuery\ESParamInterface;
 
 
 //Todo: There should be a general QueryBuilderInterface in VuFindSearch for all the targets in VuFind
@@ -25,10 +25,10 @@ interface ESQueryBuilderInterface {
      *
      */
     //todo welchen Typ nehme ich??
-    public function build($query);
+    public function build(UserQueryInterface $query);
 
     //todo: we should use an interface - actually not implemented by VuFind
-    public function setParams (ESParamBag $paramsBag);
+    public function setParams (ESParamInterface $paramsBag);
 
 
 
