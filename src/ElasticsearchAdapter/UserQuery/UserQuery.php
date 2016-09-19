@@ -12,6 +12,30 @@ namespace ElasticsearchAdapter\UserQuery;
 class UserQuery implements UserQueryInterface
 {
 
+
+    /**
+     * Name of query handler, if any.
+     *
+     * @var string
+     */
+    protected $queryHandler;
+
+    /**
+     * Query string
+     *
+     * @var string
+     */
+    protected $queryString;
+
+    /**
+     * Operator to apply to query string (null if not applicable)
+     *
+     * @var string
+     */
+    protected $operator;
+
+
+
     public function containsTerm($needle)
     {
         // TODO: Implement containsTerm() method.
@@ -29,31 +53,31 @@ class UserQuery implements UserQueryInterface
 
     public function getString()
     {
-        // TODO: Implement getString() method.
+        return $this->queryString;
     }
 
     public function setString($string)
     {
-        // TODO: Implement setString() method.
+        $this->queryString = $string;
     }
 
     public function getHandler()
     {
-        // TODO: Implement getHandler() method.
+        return $this->queryHandler;
     }
 
     public function setHandler($handler)
     {
-        // TODO: Implement setHandler() method.
+        $this->queryHandler = $handler;
     }
 
     public function getOperator()
     {
-        // TODO: Implement getOperator() method.
+        return $this->operator;
     }
 
     public function setOperator($operator)
     {
-        // TODO: Implement setOperator() method.
+        $this->operator = $operator;
     }
 }
