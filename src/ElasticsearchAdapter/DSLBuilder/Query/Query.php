@@ -16,6 +16,15 @@ namespace ElasticsearchAdapter\DSLBuilder\Query;
 use ElasticsearchAdapter\SearchHandler;
 use ElasticsearchAdapter\DSLBuilder\Query\ESQueryInterface;
 
+//use ElasticsearchAdapter\DSLBuilder\Query\BooleanQuery;
+//use ElasticsearchAdapter\DSLBuilder\Query\MultiMatchQuery;
+//use ElasticsearchAdapter\DSLBuilder\Query\Nested;
+//use ElasticsearchAdapter\DSLBuilder\Query\MatchQuery;
+//use ElasticsearchAdapter\DSLBuilder\Query\Query;
+
+
+
+
 class Query implements ESQueryInterface
 {
 
@@ -35,11 +44,11 @@ class Query implements ESQueryInterface
     //todo: think about a plugin manager solution
     protected $registeredQueryClasses =
         [
-            'bool'          =>  'ElasticsearchAdapter\DSLBuilder\DSLBuilder\Query\BooleanQuery',
-            'multi_match'   =>  'ElasticsearchAdapter\DSLBuilder\DSLBuilder\Query\MultiMatchQuery',
-            'nested'        =>  'ElasticsearchAdapter\DSLBuilder\DSLBuilder\Query\Nested',
-            'match'         =>  'ElasticsearchAdapter\DSLBuilder\DSLBuilder\Query\MatchQuery',
-            'query'         =>  'ElasticsearchAdapter\DSLBuilder\DSLBuilder\Query\Query'
+            'bool'          =>  'ElasticsearchAdapter\DSLBuilder\Query\BooleanQuery',
+            'multi_match'   =>  'ElasticsearchAdapter\DSLBuilder\Query\MultiMatchQuery',
+            'nested'        =>  'ElasticsearchAdapter\DSLBuilder\Query\Nested',
+            'match'         =>  'ElasticsearchAdapter\DSLBuilder\Query\MatchQuery',
+            'query'         =>  'ElasticsearchAdapter\DSLBuilder\Query\Query'
         ];
 
 
