@@ -11,11 +11,26 @@
 
 namespace ElasticsearchAdapter\DSLBuilder\Query;
 
-use ElasticsearchAdapter\DSLBuilder\UserQueryAwareInterface;
 
-interface ESQueryInterface extends UserQueryAwareInterface
+
+interface ESQueryInterface
 {
     public function build();
     public function getName();
+
+    //todo: do we need a special QueryType - was VuFind Abstract-Query
+    public function setUserQuery(ESQueryInterface $userQuery);
+    public function setSearchSpec(array $searchSpec);
+
+    /**
+     * @return ESQueryInterface
+     */
+    public function getUserQuery();
+
+    /**
+     * @return array
+     */
+    public function getSearchSpec();
+
 
 }

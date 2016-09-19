@@ -14,6 +14,7 @@ namespace ElasticsearchAdapter\DSLBuilder\Query;
 
 //use VuFindSearch\Query\AbstractQuery;
 use ElasticsearchAdapter\SearchHandler;
+use ElasticsearchAdapter\DSLBuilder\Query\ESQueryInterface;
 
 class Query implements ESQueryInterface
 {
@@ -87,7 +88,7 @@ class Query implements ESQueryInterface
         return  get_class($this);
     }
 
-    public function setUserQuery(AbstractQuery $userQuery)
+    public function setUserQuery(ESQueryInterface $userQuery)
     {
         $this->query = $userQuery;
     }
