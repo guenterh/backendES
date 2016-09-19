@@ -11,7 +11,7 @@
 
 namespace ElasticsearchAdapter\DSLBuilder\Query;
 
-use ElasticsearchBackend\DSLBuilder\UserQueryAwareInterface;
+use ElasticsearchAdapter\DSLBuilder\UserQueryAwareInterface;
 
 interface ESQueryInterface extends UserQueryAwareInterface
 {
