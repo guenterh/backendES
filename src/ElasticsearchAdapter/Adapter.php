@@ -12,6 +12,11 @@
 namespace ElasticsearchAdapter;
 
 
+use ElasticsearchAdapter\UserQuery\ESParamBag;
+use ElasticsearchAdapter\UserQuery\ESParamInterface;
+
+
+
 class Adapter
 {
 
@@ -28,6 +33,8 @@ class Adapter
     protected $connector;
 
 
+
+
     /**
      * Constructor.
      *
@@ -35,9 +42,10 @@ class Adapter
      *
      * @return void
      */
-    public function __construct(Connector $connector)
+    public function __construct(Connector $connector, ESQueryBuilder $queryBuilder)
     {
         $this->connector    = $connector;
+        $this->queryBuilder = $queryBuilder;
         $this->identifier   = null;
     }
 
@@ -49,12 +57,12 @@ class Adapter
      *
      */
     //todo: type of Query and params
-    public function search($query, $offset, $limit,
+    public function search($query, $offset = 0, $limit = 10,
                            $params = null
     )
     {
         //todo: do we expect a speial query type
-        if (isset($params) && !$params instanceof \stdClass )
+        if (isset($params) && !$params instanceof ESParamInterface )
         {
             throw new \Exception ("invalid ParamBag type for ElasticSearch target");
         }
